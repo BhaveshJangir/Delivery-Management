@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 import {
   increment,
   incrementAsync,
-  selectCount,
+  // selectCount,
 } from '../authSlice';
 
 // hae
 
 export default function Login() {
-  const count = useSelector(selectCount);
-  const dispatch = useDispatch();
+  // const count = useSelector(selectCount);
+  // const dispatch = useDispatch();
 
 
   return (

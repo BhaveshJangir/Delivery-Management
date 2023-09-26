@@ -9,8 +9,9 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Login from "./features/auth/components/Login";
-import Signup from "./features/auth/components/Signup";
+import CartPage from "./features/pages/CartPage";
+
+
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/signup",
     element: (<SignupPage></SignupPage>)
+  },
+  {
+    path: "/cart",
+    element: (<CartPage></CartPage>)
   },
 ]);
 
