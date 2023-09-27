@@ -11,8 +11,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import CartPage from "./features/pages/CartPage";
-import ProductDetails from "./features/product-list/components/ProductDetails";
 import ProductDetailPage from "./features/pages/ProductDetailPage";
+
 
 
 
