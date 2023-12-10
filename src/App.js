@@ -6,41 +6,52 @@ import LoginPage from "./features/pages/LoginPage";
 import SignupPage from "./features/pages/SignupPage";
 import Cheakout from "./features/pages/Checkout";
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CartPage from "./features/pages/CartPage";
 import ProductDetailPage from "./features/pages/ProductDetailPage";
-
-
-
+import Protected from "./features/auth/components/Protected";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (<Home></Home>)
+    element: (
+      <Protected>
+        <Home></Home>
+      </Protected>
+    ),
   },
-  
+
   {
     path: "/login",
-    element: (<LoginPage></LoginPage>)
+    element: <LoginPage></LoginPage>,
   },
   {
     path: "/signup",
-    element: (<SignupPage></SignupPage>)
+    element: <SignupPage></SignupPage>,
   },
   {
     path: "/cart",
-    element: (<CartPage></CartPage>)
+    element: (
+      <Protected>
+        <CartPage></CartPage>
+      </Protected>
+    ),
   },
   {
     path: "/cheakout",
-    element: (<Cheakout></Cheakout>)
+    element: (
+      <Protected>
+        <Cheakout></Cheakout>
+      </Protected>
+    ),
   },
   {
     path: "/product-detail/:id",
-    element: (<ProductDetailPage></ProductDetailPage>)
+    element: (
+      <Protected>
+        <ProductDetailPage></ProductDetailPage>
+      </Protected>
+    ),
   },
 ]);
 
@@ -48,7 +59,6 @@ function App() {
   return (
     <div className="App">
       <RouterProvider router={router} />
-      
     </div>
   );
 }

@@ -155,6 +155,7 @@ export default function ProductList() {
   useEffect(()=>{
     setPage(1);
   },[totalItems,sort])
+  
   return (
     <div>
       <div className="bg-white">
