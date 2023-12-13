@@ -20,11 +20,11 @@ export function cheakUser(loginInfo) {
     const password = loginInfo.password
     const response = await fetch('http://localhost:8080/users?email='+email);
     const data = await response.json();
-    console.log({data})
+    console.log("res",{data})
     if(data.length){
         if(password===data[0].password){
           console.log("resolve")
-          resolve({data})
+          resolve({data:data[0]})
         } else{
           console.log("reject")
           reject({message :"wrong credentials"})
