@@ -39,8 +39,8 @@ export const cheakUserAsync = createAsyncThunk(
   }
 );
 
-export const counterSlice = createSlice({
-  name: 'user',
+export const authSlice = createSlice({
+  name: 'auth',
   initialState,
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
@@ -82,7 +82,7 @@ export const counterSlice = createSlice({
 
 export const selectLoggedInUser = (state)=> state.auth.loggedInUser;
 export const selectError = (state)=> state.auth.error;
-export const { increment } = counterSlice.actions;
+
 
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
@@ -90,4 +90,4 @@ export const { increment } = counterSlice.actions;
 export const selectCount = (state) => state.counter.value;
 
 
-export default counterSlice.reducer;
+export default authSlice.reducer;

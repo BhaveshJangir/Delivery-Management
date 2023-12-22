@@ -1,10 +1,9 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { createOrder } from './orderAPI';
+import { fetchLoggedInUserOrders } from './userAPI';
 
 const initialState = {
-  orders: [],
+  userOrders: [],
   status: 'idle',
-  currentOrder : null
 };
 
 // The function below is called a thunk and allows us to perform async logic. It
@@ -12,44 +11,44 @@ const initialState = {
 // will call the thunk with the `dispatch` function as the first argument. Async
 // code can then be executed and other actions can be dispatched. Thunks are
 // typically used to make async requests.
-export const createOrderAsync = createAsyncThunk(
-  'order/createOrder',
-  async (order) => {
-    const response = await createOrder(order);
+export const fetchLoggedInUserOrdersAsync = createAsyncThunk(
+  'user/fetchLoggedInUserOrders',
+  async (id) => {
+    const response = await fetchLoggedInUserOrders(id);
     // The value we return becomes the `fulfilled` action payload
     return response.data;
   }
 );
 
-export const orderSlice = createSlice({
-  name: 'order',
+export const userSlice = createSlice({
+  name: 'user',
   initialState,
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
-    resetOrder :(state)=>{
-      state.currentOrder = null
-    }
+    increment: (state) => {
+      state.value += 1;
+    },
+  
   },
  
   extraReducers: (builder) => {
     builder
-      .addCase(createOrderAsync.pending, (state) => {
+      .addCase(fetchLoggedInUserOrdersAsync.pending, (state) => {
         state.status = 'loading';
       })
-      .addCase(createOrderAsync.fulfilled, (state, action) => {
+      .addCase(fetchLoggedInUserOrdersAsync.fulfilled, (state, action) => {
         state.status = 'idle';
-        state.orders.push(action.payload);
-        state.currentOrder = action.payload;
+        state.userOrders = action.payload;
       });
   },
 });
 
-export const { resetOrder } = orderSlice.actions;
+export const selectUserOrders = (state)=>state.user.userOrders;
 
 // The function below is called a selector and allows us to select a value from
 // the state. Selectors can also be defined inline where they're used instead of
 // in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
-export const selectCurrentOrder = (state) => state.order.currentOrder;
+export const selectCount = (state) => state.counter.value;
 
 
-export default orderSlice.reducer;
+export default userSlice.reducer;
