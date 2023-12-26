@@ -7,12 +7,10 @@ import {
 import { Link, Navigate } from "react-router-dom";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { selectLoggedInUser, updateUserAsync } from "../auth/authSlice";
+import { updateUserAsync } from "../auth/authSlice";
 import { createOrderAsync, selectCurrentOrder } from "../order/orderSlice";
+import { selectUserInfo } from "../user/userSlice";
 
-// import { Fragment, useState } from "react";
-// import { Dialog, Transition } from "@headlessui/react";
-// import { XMarkIcon } from "@heroicons/react/24/outline";
 
 function Checkout() {
   const [open, setOpen] = useState(true);
@@ -32,7 +30,7 @@ function Checkout() {
   const [selecteAddress, setSelecteAddress] = useState(null);
   const [paymentMethod, setPaymentMethod] = useState(null);
   const currentOrder = useSelector(selectCurrentOrder);
-  const user = useSelector(selectLoggedInUser);
+  const user = useSelector(selectUserInfo);
   const handelQuantity = (e, item) => {
     console.log(e, item);
     dispatch(updateCartAsync({ ...item, quantity: +e.target.value }));

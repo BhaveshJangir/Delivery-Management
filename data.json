@@ -734,7 +734,7 @@
           "street": "602",
           "city": "Bangalore",
           "state": "karnataka",
-          "pincode": "760056"
+          "pinCode": "8565653"
         },
         {
           "name": "Harsh Jaiswal",
@@ -743,7 +743,7 @@
           "street": "602",
           "city": "Bangalore",
           "state": "karnataka",
-          "pincode": "760056"
+          "pinCode": "8"
         }
       ],
       "id": 1
@@ -944,6 +944,69 @@
       },
       "status": "pending",
       "id": 3
+    },
+    {
+      "items": [
+        {
+          "title": "iPhone X",
+          "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+          "price": 899,
+          "discountPercentage": 17.94,
+          "rating": 4.44,
+          "stock": 34,
+          "brand": "Apple",
+          "category": "smartphones",
+          "thumbnail": "https://i.dummyjson.com/data/products/2/thumbnail.jpg",
+          "images": [
+            "https://i.dummyjson.com/data/products/2/1.jpg",
+            "https://i.dummyjson.com/data/products/2/2.jpg",
+            "https://i.dummyjson.com/data/products/2/3.jpg",
+            "https://i.dummyjson.com/data/products/2/thumbnail.jpg"
+          ],
+          "quantity": 1,
+          "user": 1,
+          "id": 1
+        }
+      ],
+      "totalAmount": 899,
+      "totalItems": 1,
+      "user": {
+        "email": "harshjaiswal40383@gmail.com",
+        "password": "#Nikku1999",
+        "addresses": [
+          {
+            "name": "Harsh Jaiswal",
+            "email": "harshjaiswal40383@gmail.com",
+            "phone": "9131887122",
+            "street": "602",
+            "city": "Bangalore",
+            "state": "karnataka",
+            "pincode": "760056"
+          },
+          {
+            "name": "Harsh Jaiswal",
+            "email": "harshjaiswal40383@gmail.com",
+            "phone": "9131887122",
+            "street": "602",
+            "city": "Bangalore",
+            "state": "karnataka",
+            "pincode": "760056"
+          }
+        ],
+        "id": 1
+      },
+      "paymentMethod": "card",
+      "selecteAddress": {
+        "name": "Harsh Jaiswal",
+        "email": "harshjaiswal40383@gmail.com",
+        "phone": "9131887122",
+        "street": "602",
+        "city": "Bangalore",
+        "state": "karnataka",
+        "pincode": "760056"
+      },
+      "status": "pending",
+      "id": 4
     }
   ]
 }

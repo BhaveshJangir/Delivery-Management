@@ -17,6 +17,7 @@ import PageNotFound from "./features/pages/404";
 import OrderSuccessPage from "./features/pages/OrderSuccessPage";
 import UserProfilePage from "./features/pages/UserProfilePage";
 import UserOrdersPage from "./features/pages/UserOrdersPage";
+import { fetchLoggedInUserAsync } from "./features/user/userSlice";
 
 const router = createBrowserRouter([
   {
@@ -94,6 +95,7 @@ function App() {
   useEffect(()=>{
     if(user){
       dispatch(fetchItemsByUserIdAsync(user.id))
+      dispatch(fetchLoggedInUserAsync(user.id))
     }
   },[dispatch,user])
 
