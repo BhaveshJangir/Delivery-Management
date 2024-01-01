@@ -40,4 +40,12 @@ export function cheakUser(loginInfo) {
   );
 }
 
+export function signOut(userId) {
+  return new Promise(async(resolve) =>{
+    
+    //TODO: on server we will remove userseson info
+    resolve({data: 'success'})
+  }
+  );
+}
 
