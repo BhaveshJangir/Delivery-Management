@@ -3,6 +3,7 @@ import {  useDispatch, useSelector } from "react-redux";
 import { Link, Navigate } from "react-router-dom";
 import {cheakUserAsync, selectError, selectLoggedInUser} from "../authSlice";
 import { useForm } from 'react-hook-form';
+// import styles from './backgroundImage.module.css';
 
 
 export default function Login() {
@@ -21,7 +22,8 @@ export default function Login() {
   return (
     <>
       {user && <Navigate to="/" replace={true}></Navigate>}
-      <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+      {/* <img style={{position:"realative", z-index: "-1299999"}} src='https://d3jlwjv6gmyigl.cloudfront.net/images/2021/11/Thumbnail-2.O-delhivery.png'></img> */}
+      <div className=" flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
             className="mx-auto h-10 w-auto"
@@ -132,6 +134,7 @@ export default function Login() {
           </p>
         </div>
       </div>
+      
     </>
   );
 }

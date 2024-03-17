@@ -20,7 +20,7 @@ export function fetchAllOrders(pagination) {
   }
   return new Promise(async (resolve) =>{
     //TODO: we will not hard-code server URL here
-    const response = await fetch('http://localhost:8080/orders?'+queryString) 
+    const response = await fetch('http://localhost:8080/parcel?') 
     const data = await response.json()
     const totalOrders = await response.headers.get('X-Total-Count');
     resolve({ data: { orders: data, totalOrders: +totalOrders } });

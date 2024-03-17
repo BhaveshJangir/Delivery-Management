@@ -7,6 +7,8 @@ const initialState = {
   loggedInUser: null,
   status: 'idle',
   error: null,
+  status:"idle",
+  
 };
 
 // The function below is called a thunk and allows us to perform async logic. It
@@ -14,6 +16,10 @@ const initialState = {
 // will call the thunk with the `dispatch` function as the first argument. Async
 // code can then be executed and other actions can be dispatched. Thunks are
 // typically used to make async requests.
+
+
+
+
 export const createUserAsync = createAsyncThunk(
   'user/createUser',
   async (userData) => {
@@ -61,6 +67,8 @@ export const authSlice = createSlice({
   
   },
  
+  
+
   extraReducers: (builder) => {
     builder
       .addCase(createUserAsync.pending, (state) => {

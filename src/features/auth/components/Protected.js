@@ -1,3 +1,4 @@
+import React from "react";
 import {  useSelector } from "react-redux";
 import { selectLoggedInUser } from "../authSlice";
 import { Navigate } from "react-router-dom";
@@ -7,6 +8,12 @@ function Protected({children}) {
 
     if(!user){
         return <Navigate to='/login' replace={true}></Navigate>
+    }
+    if(user && user.role=='admin'){
+        return <Navigate to='/admin' replace={true}></Navigate>
+    }
+    if(user && user.role=='agent'){
+        return <Navigate to='/homeagent' replace={true}></Navigate>
     }
     return children;
 }

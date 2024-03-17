@@ -1,3 +1,4 @@
+import React from "react";
 import ForgotPassword from "../auth/components/ForgotPassword";
 
 function ForgotPasswordPage() {

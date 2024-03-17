@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import React,{ useEffect } from "react";
 import { selectLoggedInUser, signOutAsync } from "../authSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
@@ -10,7 +10,6 @@ function Logout() {
     useEffect(()=>{
         dispatch(signOutAsync())
     })
-    //but useEffect runs after render of comp, so we have to delay navigate part
 
     return ( 
         <>

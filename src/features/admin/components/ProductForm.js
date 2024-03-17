@@ -9,8 +9,8 @@ import {
 } from "../../product/productSlice";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
-import { selectProductById } from "../productSlice";
+import React, { useEffect } from "react";
+import { selectProductById } from "../ParcelSlice";
 import { updateCartAsync } from "../../cart/cartSlice";
 
 function ProductForm() {

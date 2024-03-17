@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from "../navbar/Navbar";
 import UserProfile from "../user/components/UserProfile";
 

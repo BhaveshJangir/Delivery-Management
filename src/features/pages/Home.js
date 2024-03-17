@@ -1,11 +1,11 @@
+import React from "react";
 import Navbar from "../navbar/Navbar";
-import ProductList from "../product/components/ProductList";
+import UserOrders from "../user/components/UserOrders";
+
 function Home() {
     return ( 
         <Navbar>
-            <ProductList>
-
-            </ProductList>
+            <UserOrders></UserOrders>
         </Navbar>
      );
 }

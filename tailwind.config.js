@@ -8,6 +8,10 @@ module.exports = {
       gridTemplateRows: {
         '[auto,auto,1fr]': 'auto auto 1fr',
       },
+      backgroundImage: {
+        'hero-pattern': "url('/img/hero-pattern.svg')",
+        'footer-texture': "url('/delhivery.png')",
+      },
     },
   },
   plugins: [

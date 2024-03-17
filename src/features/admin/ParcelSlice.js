@@ -11,14 +11,7 @@ const initialState = {
 };
 
 
-// export const fetchAllProductsAsync = createAsyncThunk(
-//   'product/fetchAllProducts',
-//   async () => {
-//     const response = await fetchAllProducts();
-//     // The value we return becomes the `fulfilled` action payload
-//     return response.data;
-//   }
-// );
+
 
 export const fetchProductByIdAsync = createAsyncThunk(
   'product/fetchProductById',

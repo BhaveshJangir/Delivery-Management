@@ -1,9 +1,10 @@
-import AdminProductList from "../admin/components/AdminProductList";
+import React from "react";
+import AdminForm from "../admin/components/AdminForm";
 import Navbar from "../navbar/Navbar";
 function AdminHome() {
     return ( 
         <Navbar>
-            <AdminProductList ></AdminProductList>
+            <AdminForm ></AdminForm>
         </Navbar>
      );
 }
